@@ -1,0 +1,110 @@
+.campanhas-container {
+  width: 100%;
+  height: 100vh;
+
+  .slick-slider,
+  .slick-list,
+  .slick-track {
+    height: 100%;
+  }
+}
+
+.campanha-slide {
+  width: 100%;
+  height: 100vh;
+}
+
+.campanha-background {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.campanha-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  max-width: 700px;
+
+  h2 {
+    font-size: 3rem;
+    font-family: "Orbitron", sans-serif;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .botoes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .detalhes,
+    .jogar {
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .detalhes {
+      background-color: #5e60ce;
+      color: white;
+
+      &:hover {
+        background-color: #4a4dcc;
+      }
+    }
+
+    .jogar {
+      background-color: #f72585;
+      color: white;
+
+      &:hover {
+        background-color: #e01e75;
+      }
+    }
+  }
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  background-color: #5e60ce;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background-color: #4a4dcc;
+  }
+
+  &.left {
+    left: 20px;
+  }
+
+  &.right {
+    right: 20px;
+  }
+}

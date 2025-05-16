@@ -13,7 +13,7 @@ const Home = () => {
             <p className="subtitle">Um mundo onde suas escolhas definem seu legado.</p>
             <p className="description">
               Este é um mundo forjado por deuses, rasgado pela guerra e sustentado pela honra.
-              Prepare-se para explorar terras desconhecidas, pactuar com entidades e enfrentar o vazio.
+              Prepare-se para explorar terras desconhecidas, pactuar com entidades e traçar seu legado.
             </p>
             <button className="cta-button">Explorar o Mundo</button>
           </div>

@@ -5,6 +5,7 @@ import HeaderBar from './components/HeaderBar';
 // Páginas
 import Home from './pages/home/Home';
 import Historia from './pages/historia/Historia';
+import Campanhas from './pages/campanhas/Campanhas';
 import Geografia from './pages/geografia/Geografia';
 import Deuses from './pages/deuses/Deuses';
 import Bestiario from './pages/bestiario/Bestiario';
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/historia" element={<Historia />} />
+          <Route path="/campanhas" element={<Campanhas />} />
           <Route path="/geografia" element={<Geografia />} />
           <Route path="/deuses" element={<Deuses />} />
           <Route path="/bestiario" element={<Bestiario />} />

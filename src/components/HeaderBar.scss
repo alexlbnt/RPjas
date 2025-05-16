@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   height: 60px;
-  background-color: #191620;
+  background-color: #1e1c2f;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,6 +17,7 @@
     font-family: 'Cinzel', serif;
     font-size: 1.5rem;
     font-weight: bold;
+    color: #60519b;
   }
 
   .nav-list {
@@ -26,7 +27,7 @@
 
     li {
       a {
-        color: #ddd;
+        color: #c5c5c5;
         text-decoration: none;
         transition: color 0.2s;
 
@@ -36,7 +37,7 @@
       }
 
       &.active a {
-        color: #610179;
+        color: #60519b;
         font-weight: bold;
         border-bottom: 2px solid #650094;
       }

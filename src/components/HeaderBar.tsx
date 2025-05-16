@@ -6,6 +6,7 @@ const HeaderBar = () => {
 
   const navLinks = [
     { path: '/', label: 'Início' },
+      { path: '/campanhas', label: 'Campanhas' },
     { path: '/historia', label: 'História' },
     { path: '/geografia', label: 'Geografia' },
     { path: '/deuses', label: 'Deuses' },
