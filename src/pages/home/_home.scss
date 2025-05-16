@@ -1,0 +1,163 @@
+/* Adicione isso no topo do arquivo ou em um global.scss */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; // impede rolagem
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+/* Agora a home-container vai ter tamanho exato da imagem */
+.home-container {
+  background-size: contain; // para manter proporção
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 640px; // altura EXATA da imagem
+
+  position: relative;
+  color: white;
+
+  .background-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+
+  .home-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    width: 100%;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* ... mantenha o resto do seu código atual aqui */
+}
+
+
+.home-container {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: white;
+  position: relative;
+
+  .background-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    padding: 80px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    width: 100%;
+    gap: 60px;
+
+    .left-section {
+      flex: 1;
+      min-width: 300px;
+
+      .title {
+        font-size: 4rem;
+        font-weight: bold;
+        font-family: 'Cinzel', serif;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+        margin: 20px 0;
+        font-style: italic;
+      }
+
+      .description {
+        max-width: 600px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      .cta-button {
+        background: #e63946;
+        color: white;
+        border: none;
+        padding: 14px 28px;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover {
+          background: #d62828;
+        }
+      }
+    }
+
+    .right-section {
+      flex: 1;
+      min-width: 300px;
+
+      .awards, .trailer {
+        margin-bottom: 40px;
+
+        h3 {
+          font-size: 1.4rem;
+          margin-bottom: 10px;
+        }
+
+        ul {
+          list-style: none;
+          padding-left: 0;
+
+          li {
+            margin-bottom: 8px;
+            &::before {
+              content: '★ ';
+              color: gold;
+            }
+          }
+        }
+
+        .video-thumbnail {
+          position: relative;
+          width: 100%;
+          max-width: 400px;
+
+          img {
+            width: 100%;
+            border-radius: 10px;
+            opacity: 0.8;
+          }
+
+          .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
