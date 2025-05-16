@@ -158,3 +158,9 @@ html, body {
     }
   }
 }
+
+
+//Saporra é pra escrolar (Pq o scroll não funciona devido a imagem de fundo estar setada como tamanho max)
+body {
+  overflow-y: auto;
+}
