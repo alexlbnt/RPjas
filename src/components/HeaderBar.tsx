@@ -10,7 +10,7 @@ const HeaderBar = () => {
     { path: '/historia', label: 'História' },
     { path: '/geografia', label: 'Geografia' },
     { path: '/deuses', label: 'Deuses' },
-    { path: '/bestiario', label: 'Bestiário' },
+    { path: '/compendio', label: 'compêndio' },
     { path: '/mapa', label: 'Mapa' },
   ];
 

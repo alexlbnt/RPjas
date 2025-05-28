@@ -1,0 +1,169 @@
+.compendio-container {
+  background: linear-gradient(to bottom, #121212, #1a1a1a);
+  color: #f5f5f5;
+  padding: 4rem 2rem;
+  font-family: "Poppins", sans-serif;
+
+  .titulo-principal {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-family: "Orbitron", sans-serif;
+    color: #fca311;
+    text-shadow: 0 0 10px #fca311;
+    animation: fadeIn 1s ease;
+  }
+
+  .cards-compendio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    .card-compendio {
+      background: #222;
+      border-radius: 16px;
+      padding: 2rem;
+      width: 280px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1s ease;
+      text-align: center;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+      }
+
+      .icone {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #fca311;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #fca311;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        color: #ccc;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1rem;
+
+        li::before {
+          content: "• ";
+          color: #fca311;
+        }
+
+        li {
+          margin-bottom: 0.5rem;
+          font-size: 0.95rem;
+        }
+      }
+
+      .ver-mais-btn {
+        background-color: #fca311;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background-color: #d48806;
+        }
+      }
+    }
+  }
+
+  // Modal
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+
+    .modal-content {
+      background: #1e1e1e;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+      color: #f5f5f5;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+
+      .modal-icone {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        color: #fca311;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #fca311;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #ddd;
+        line-height: 1.5;
+      }
+
+      .fechar-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: transparent;
+        border: none;
+        font-size: 2rem;
+        color: #fca311;
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #d48806;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

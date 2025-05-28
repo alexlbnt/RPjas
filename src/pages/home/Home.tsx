@@ -20,11 +20,10 @@ const Home = () => {
 
           <div className="right-section">
             <div className="awards">
-              <h3>Foco deste Mundo</h3>
+              <h3>As Duas Certezas desse Mundo:</h3>
               <ul>
-                <li>Novas Mecanicas</li>
-                <li>Personagens Marcantes</li>
-                <li>Mundo vivo e interativo</li>
+                <li>A morte não é inevitável.</li>
+                <li>Nada é o que parece.</li>
               </ul>
             </div>
 

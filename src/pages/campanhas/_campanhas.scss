@@ -1,6 +1,7 @@
 .campanhas-container {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
+  font-family: "Poppins", sans-serif;
 
   .slick-slider,
   .slick-list,
@@ -11,7 +12,7 @@
 
 .campanha-slide {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
 }
 
 .campanha-background {
@@ -22,20 +23,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    z-index: 1;
+  }
 }
 
 .campanha-overlay {
-  background: rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   padding: 2rem;
-  border-radius: 12px;
-  color: white;
+  border-radius: 16px;
+  color: #fff;
   text-align: center;
   max-width: 700px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease;
 
   h2 {
     font-size: 3rem;
     font-family: "Orbitron", sans-serif;
     margin-bottom: 1rem;
+    text-shadow: 0 0 10px #650094;
   }
 
   p {
@@ -49,31 +67,33 @@
     gap: 1rem;
 
     .detalhes,
-    .jogar {
+    .assistir {
       padding: 0.75rem 1.5rem;
       font-weight: bold;
       border: none;
-      border-radius: 8px;
+      border-radius: 50px;
       cursor: pointer;
       font-size: 1rem;
-      transition: background 0.3s;
+      transition: all 0.3s;
     }
 
     .detalhes {
-      background-color: #5e60ce;
+      background: linear-gradient(45deg, #5e60ce, #7209b7);
       color: white;
 
       &:hover {
-        background-color: #4a4dcc;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 20px rgba(94, 96, 206, 0.6);
       }
     }
 
-    .jogar {
-      background-color: #f72585;
+    .assistir {
+      background: linear-gradient(45deg, #f72585, #b5179e);
       color: white;
 
       &:hover {
-        background-color: #e01e75;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 20px rgba(247, 37, 133, 0.6);
       }
     }
   }
@@ -87,17 +107,18 @@
   font-size: 2rem;
   width: 40px;
   height: 40px;
-  background-color: #5e60ce;
-  color: white;
+  background-color: #ffffffcc;
+  color: #333;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s;
 
   &:hover {
-    background-color: #4a4dcc;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   }
 
   &.left {
@@ -106,5 +127,96 @@
 
   &.right {
     right: 20px;
+  }
+}
+
+.detalhes-campanha {
+  background: linear-gradient(to bottom, #1a1a1a, #121212);
+  color: #f5f5f5;
+  padding: 4rem 2rem;
+
+  .titulo-campanha {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #60519b;
+    text-shadow: 0 0 10px #60519b;
+    animation: fadeIn 1s ease;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    .card {
+      background: #222;
+      border-radius: 16px;
+      padding: 1.5rem;
+      max-width: 300px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      animation: fadeInUp 1s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+      }
+
+      .icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #60519b;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #60519b;
+      }
+
+      p,
+      ul {
+        font-size: 1rem;
+        color: #ccc;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li::before {
+          content: "• ";
+          color: #60519b;
+        }
+
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
