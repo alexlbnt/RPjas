@@ -9,8 +9,8 @@
     font-size: 3rem;
     margin-bottom: 3rem;
     font-family: "Orbitron", sans-serif;
-    color: #fca311;
-    text-shadow: 0 0 10px #fca311;
+    color: #60519b;
+    text-shadow: 0 0 10px #493d77;
     animation: fadeIn 1s ease;
   }
 
@@ -38,13 +38,13 @@
       .icone {
         font-size: 3rem;
         margin-bottom: 1rem;
-        color: #fca311;
+        color: #60519b;
       }
 
       h2 {
         font-size: 1.8rem;
         margin-bottom: 1rem;
-        color: #fca311;
+        color: #60519b;
       }
 
       p {
@@ -60,7 +60,7 @@
 
         li::before {
           content: "• ";
-          color: #fca311;
+          color: #7766bd;
         }
 
         li {
@@ -70,7 +70,7 @@
       }
 
       .ver-mais-btn {
-        background-color: #fca311;
+        background-color: #60519b;
         border: none;
         padding: 0.5rem 1rem;
         border-radius: 8px;
@@ -79,7 +79,7 @@
         transition: background 0.3s;
 
         &:hover {
-          background-color: #d48806;
+          background-color: #7766bd;
         }
       }
     }
@@ -114,13 +114,13 @@
       .modal-icone {
         font-size: 4rem;
         margin-bottom: 1rem;
-        color: #fca311;
+        color: #60519b;
       }
 
       h2 {
         font-size: 2rem;
         margin-bottom: 1rem;
-        color: #fca311;
+        color: #60519b;
       }
 
       p {
@@ -136,12 +136,12 @@
         background: transparent;
         border: none;
         font-size: 2rem;
-        color: #fca311;
+        color: #60519b;
         cursor: pointer;
         transition: color 0.3s;
 
         &:hover {
-          color: #d48806;
+          color: #60519b;
         }
       }
     }

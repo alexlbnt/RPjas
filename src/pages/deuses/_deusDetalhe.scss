@@ -1,0 +1,102 @@
+.deus-detalhe-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+
+  .voltar-fixo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #60519b;
+    font-weight: bold;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+    }
+  }
+
+  .fundo-imagem {
+    flex: 1;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    align-self: center;
+    background-color: #000;
+
+
+  }
+
+  .painel-info {
+    width: 400px;
+    background: linear-gradient(270deg, #0a0a0a, #1c1c1c, #0a0a0a);
+    background-size: 600% 600%;
+    animation: gradienteAnimado 8s ease infinite;
+    padding: 2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.6);
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: #60519b;
+      margin-bottom: 1rem;
+    }
+
+    .descricao {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    p {
+      font-size: 0.95rem;
+      margin-bottom: 0.8rem;
+
+      strong {
+        color: #60519b;
+      }
+    }
+  }
+}
+
+/* Gradiente animado */
+@keyframes gradienteAnimado {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .deus-detalhe-container {
+    flex-direction: column;
+
+    .painel-info {
+      width: 100%;
+      padding: 1.5rem;
+    }
+  }
+
+  .voltar-fixo {
+    top: 15px;
+    left: 15px;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}

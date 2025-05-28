@@ -1,8 +1,6 @@
-// src/pages/deuses/DeusDetalhe.tsx
-
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import "./_deuses.scss";
+import "./_deusDetalhe.scss";
 
 const deuses = [
   {
@@ -38,18 +36,19 @@ const DeusDetalhe = () => {
   if (!deus) return <div>Deus não encontrado</div>;
 
   return (
-    <div className="deus-detalhe-container">
-      <Link to="/deuses" className="voltar">← Voltar</Link>
-      <div className="deus-detalhe">
-        <img src={deus.imagem} alt={deus.nome} />
-        <h1>{deus.nome}</h1>
-        <h2>{deus.titulo}</h2>
-        <p className="descricao">{deus.descricaoLonga}</p>
-        <p><strong>Domínios:</strong> {deus.dominios.join(", ")}</p>
-        <p><strong>Símbolo:</strong> {deus.simbolo}</p>
-      </div>
+  <div className="deus-detalhe-container">
+    <Link to="/deuses" className="voltar-fixo">← Voltar</Link>
+    <img className="fundo-imagem" src={deus.imagem} alt={`Imagem de ${deus.nome}`} />
+    <div className="painel-info">
+      <h1>{deus.nome}</h1>
+      <h2>{deus.titulo}</h2>
+      <p className="descricao">{deus.descricaoLonga}</p>
+      <p><strong>Domínios:</strong> {deus.dominios.join(", ")}</p>
+      <p><strong>Símbolo:</strong> {deus.simbolo}</p>
     </div>
-  );
+  </div>
+);
+
 };
 
 export default DeusDetalhe;
